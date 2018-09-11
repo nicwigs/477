@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The Endless Enigma</title>
+        <link href="./enigma.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <figure><img src="banner-800.png" width="800" height="357" alt="Banner"/></figure>
+            <nav>
+                <p><a href="./enigma.html">Enigma</a><a class="active" href="./settings.html">Settings</a><a href="./batch.html">Batch</a><a href="./">Ausloggen</a></p>
+            </nav>
+        </header>
+        <div class="machine">
+            <div class="enigma">
+                <figure><img src="rotors.png" width="1024" height="580" alt="Rotors"/></figure>
+                <div class="rotor_pos r4 ">
+                    <p>A</p>
+                </div>
+                <div class="rotor_pos r5 ">
+                    <p>A</p>
+                </div>
+                <div class="rotor_pos r6 ">
+                    <p>A</p>
+                </div>
+            </div>
+        </div><div class="form">
+            <div class="form_t">
+                <div class="left_col">
+                    <form>
+                        <p>
+                            <label for="rotor_1">Rotor 1: </label>
+                            <select name="rotor_1" id="rotor_1">
+                                <option>I</option>
+                                <option>II</option>
+                                <option>III</option>
+                                <option>IV</option>
+                                <option>V</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="rotor_2">Rotor 2: </label>
+                            <select name="rotor_2" id="rotor_2">
+                                <option>I</option>
+                                <option>II</option>
+                                <option>III</option>
+                                <option>IV</option>
+                                <option>V</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="rotor_3">Rotor 3: </label>
+                            <select name="rotor_3" id="rotor_3">
+                                <option>I</option>
+                                <option>II</option>
+                                <option>III</option>
+                                <option>IV</option>
+                                <option>V</option>
+                            </select>
+                        </p>
+                        <p><input type="button" name="set" value="Set"></p>
+                    </form>
+                </div>
+                <div class="right_col">
+                    <form>
+                        <p>
+                            <label for="setting_1">Setting:</label>
+                            <input type="text" name="setting_1" id="setting_1" value="A">
+                        </p>
+                        <p>
+                            <label for="setting_2">Setting:</label>
+                            <input type="text" name="setting_2" id="setting_2" value="A">
+                        </p>
+                        <p>
+                            <label for="setting_3">Setting:</label>
+                            <input type="text" name="setting_3" id="setting_3" value="A">
+                        </p>
+                        <p><input type="button" name="cancel" value="Cancel"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <figure><img src="banner1-800.png" width="800" height="100" alt="Bottom Banner"/></figure>
+        </footer>
+    </body>
+</html>

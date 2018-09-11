@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Endless Enigma</title>
+    <link href="./enigma.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <figure><img src="banner-800.png" width="800" height="357" alt="Banner"/></figure>
+    <nav>
+        <p><a href="./enigma.html">Enigma</a><a href="./settings.html">Settings</a><a class="active" href="./batch.html">Batch</a><a href="./">Ausloggen</a></p>
+    </nav>
+</header>
+<div class="machine">
+    <div class="enigma">
+        <figure><img src="rotors.png" width="1024" height="580" alt="Rotors"/></figure>
+        <div class="rotor_pos r4 ">
+            <p>A</p>
+        </div>
+        <div class="rotor_pos r5 ">
+            <p>A</p>
+        </div>
+        <div class="rotor_pos r6 ">
+            <p>A</p>
+        </div>
+    </div>
+</div><div class="form">
+    <div class="form_t">
+        <div class="left_col">
+            <form>
+                <p><textarea name="decoded" id="decoded"></textarea></p>
+            </form>
+        </div>
+        <div class="right_col">
+            <form>
+                <p><textarea name="ecoded" id="encoded"></textarea></p>
+            </form>
+        </div>
+        <p><input type="button" name="encode" value="Encode ->"><input type="button" name="decode" value="Decode <-"><input type="button" name="reset" value="Reset"></p>
+    </div>
+</div>
+<footer>
+    <figure><img src="banner1-800.png" width="800" height="100" alt="Bottom Banner"/></figure>
+</footer>
+</body>
+</html>

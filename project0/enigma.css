@@ -1,0 +1,376 @@
+html, body, header, footer, hgroup, nav, article, section, figure,
+figcaption, h1, h2, h3, ul, li, body, div, p, img {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+body{
+    background-color: black;
+    text-align:center;
+    color: white;
+    font-family: "Arial",san-serif;
+}
+header, footer, div.welcome, form{
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+header, footer{
+    background-color:#18453b;
+}
+footer{
+    padding-top:1em;
+}
+header{
+    padding-top:0.5em;
+}
+div.welcome{
+    font-size:1.5em;
+    padding:1em;
+    font-style:italic;
+}
+div.form{
+    background-color:#97a2a2;
+    padding: 0.5em;
+}
+div.form div.form_t{
+    background-image: url("./texture.png");
+    max-width: 800px;
+    margin: 0.5em auto 0.5em auto;
+    padding: 1em 0 1em 0;
+    border: thin solid black;
+}
+header img, footer img{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+label{
+    margin-right:16em;
+}
+input[type="submit"]{
+    max-width:25.5em;
+    width:100%;
+}
+input[type="text"]{
+    max-width:25em;
+    width:100%;
+    margin: 0 0 1em 0;
+}
+nav{
+    text-align:center;
+    padding:0.5em 16em 0.5em 0;
+    font-size:1.3em;
+}
+nav a{
+    padding-right:2em;
+    margin: 2em 0 2em 0;
+    color:#97a2a2;
+    text-decoration: none;
+}
+nav a.active {
+    color:white;
+}
+input[name="reset"],input[name="decode"],input[name="encode"]{
+    max-width:8em;
+    width:100%;
+    margin-right:1em;
+}
+div.machine{
+    background-color:#97a2a2;
+    text-align:center;
+    margin:0;
+}
+div.enigma{
+    width: 800px;
+    margin: 0 auto 0 auto;
+    padding: 1em 0 0 0;
+    font-size: 18px;
+    position: relative;
+    z-index:0;
+}
+div.enigma figure img{
+    margin: 0 auto;
+    width:100%;
+    height:auto;
+    border:0;
+}
+@media only screen and (max-width: 800px) {
+    div.enigma {
+        width: 600px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    div.enigma {
+        width: 400px;
+        font-size: 9px;
+    }
+}
+div.key{
+    position: absolute;
+    width: 7%;
+    height:6%;
+}
+div.key p{ /*Somewhere p got messed up*/
+    width:100%;
+    height:100%;
+}
+div.key input[type="button"]{
+    background-image:url("./key.png");
+    background-color:transparent;
+    background-repeat: no-repeat;
+    background-size: 100%; /*Keeps height auto*/
+    background-position: center;
+    z-index: 100; /*Puts on layer above the machine*/
+
+    width:100%;
+    height:100%;
+    border:0;
+    color:white;
+    font-size:2em;
+}
+div.rotor_pos{
+    color:black;
+    position:absolute;
+}
+div.light{
+    position:absolute;
+    color:#97a2a2;
+    font-size:1.8em;
+}
+div.left_col p,div.right_col p{
+    padding-bottom:1em;
+}
+div.right_col p{
+    padding-bottom:1.1em;
+}
+div.left_col form,div.right_col form{
+    padding:0;
+}
+div.left_col,div.right_col{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+input[name="set"],input[name="cancel"]{
+    width:8.5em;
+}
+label[for="rotor_1"],label[for="rotor_2"],label[for="rotor_3"],label[for="setting_1"],label[for="setting_2"],label[for="setting_3"]{
+    margin:0;
+}
+textarea{
+    width:20em;
+    height:5em;
+}
+div.right_col label{
+    padding-left:1.5em;
+}
+div.right_col input[type=text]{
+    width:1em;
+    height:1em;
+    margin:0;
+}
+/*Rotor Positions*/
+div.r1, div.r2, div.r3{
+    top:27%;
+}
+div.r1{
+    left:28.5%;
+}
+div.r2{
+    left:39%;
+}
+div.r3{
+    left:49.5%;
+}/*Following rotors for settings page*/
+div.r4, div.r5, div.r6{
+    top:55%;
+}
+div.r4{
+    left:28.5%;
+}
+div.r5{
+    left:39%;
+}
+div.r6{
+    left:49.5%;
+}
+/*Light Positions*/
+div.light-q,div.light-w,div.light-e,div.light-r,div.light-t,div.light-z,div.light-u,div.light-i,div.light-o{
+    top:43%;
+}
+div.light-a,div.light-s,div.light-d,div.light-f,div.light-g,div.light-h,div.light-j,div.light-k{
+    top:50%;
+}
+div.light-p,div.light-y,div.light-x,div.light-c,div.light-v,div.light-b,div.light-n,div.light-m,div.light-l{
+    top: 56.5%;
+}
+div.light-q{
+    left:13%;
+}
+div.light-w{
+    left:22%;
+}
+div.light-e{
+    left:31.5%;
+}
+div.light-r{
+    left:41%;
+}
+div.light-t{
+    left:50.5%;
+}
+div.light-z{
+    left:59.5%;
+}
+div.light-u{
+    left:68.5%;
+}
+div.light-i{
+    left:78.5%;
+}
+div.light-o{
+    left:86.5%;
+}
+div.light-a{
+    left:16.5%;
+}
+div.light-s{
+    left:25.5%;
+}
+div.light-d{
+    left:35%;
+}
+div.light-f{
+    left:44%;
+}
+div.light-g{
+    left:53%;
+}
+div.light-h{
+    left:62.5%;
+}
+div.light-j{
+    left:72%;
+}
+div.light-k{
+    left:81%;
+}
+div.light-p{
+    left:10.5%;
+}
+div.light-y{
+    left:19.5%;
+}
+div.light-x{
+    left:29%;
+}
+div.light-c{
+    left:38%;
+}
+div.light-v{
+    left:47%;
+}
+div.light-b{
+    left:56.5%;
+}
+div.light-n{
+    left:65.5%;
+}
+div.light-m{
+    left:74.5%;
+}
+div.light-l{
+    left:84.5%;
+}
+/*Key Positions*/
+div.key-q, div.key-w,div.key-e,div.key-r,div.key-t,div.key-z,div.key-u,div.key-i,div.key-o{
+    top:64.5%;
+}
+div.key-a,div.key-s,div.key-d,div.key-f,div.key-g,div.key-h,div.key-j,div.key-k{
+    top:71%;
+}
+div.key-p,div.key-y,div.key-x,div.key-c,div.key-v,div.key-b,div.key-n,div.key-m,div.key-l{
+    top:77%;
+}
+div.key-q{
+    left:12%;
+}
+div.key-w{
+    left:21%;
+}
+div.key-e{
+    left:30%;
+}
+div.key-r{
+    left:39%;
+}
+div.key-t{
+    left:47.5%;
+}
+div.key-z{
+    left:57%;
+}
+div.key-u{
+    left:66%;
+}
+div.key-i{
+    left:74.5%;
+}
+div.key-o{
+    left:84%;
+}
+div.key-a{
+    left:15%;
+}
+div.key-s{
+    left:24.5%;
+}
+div.key-d{
+    left:33%;
+}
+div.key-f{
+    left:42%;
+}
+div.key-g{
+    left:51%;
+}
+div.key-h{
+    left:60%;
+}
+div.key-j{
+    left:68%;
+}
+div.key-k{
+    left:78%;
+}
+div.key-p{
+    left:10%;
+}
+div.key-y{
+    left:18.5%;
+}
+div.key-x{
+    left:27%;
+}
+div.key-c{
+    left:36%;
+}
+div.key-v{
+    left:45%;
+}
+div.key-b{
+    left:53.5%;
+}
+div.key-n{
+    left:62%;
+}
+div.key-m{
+    left:71%;
+}
+div.key-l{
+    left:80%;
+}
